@@ -1,0 +1,30 @@
+fragment RunnerDetailsShared on CiRunner {
+  id
+  runnerType
+  active
+  accessLevel
+  runUntagged
+  locked
+  ipAddress
+  description
+  maximumTimeout
+  tagList
+  createdAt
+  status(legacyMode: null)
+  contactedAt
+  version
+  editAdminUrl
+  userPermissions {
+    updateRunner
+    deleteRunner
+  }
+  groups {
+    nodes {
+      id
+      avatarUrl
+      name
+      fullName
+      webUrl
+    }
+  }
+}

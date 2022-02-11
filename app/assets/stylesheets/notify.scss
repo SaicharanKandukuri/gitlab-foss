@@ -1,0 +1,52 @@
+@import 'framework/mixins';
+@import 'framework/variables';
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p.details {
+  font-style: italic;
+  color: $gray-500;
+}
+
+.footer > p {
+  font-size: small;
+  color: $gray-500;
+}
+
+pre.commit-message {
+  white-space: pre-wrap;
+}
+
+.gl-label-scoped {
+  border: 2px solid currentColor;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 17px;
+  line-height: 14px;
+}
+
+.gl-label-text {
+  padding: 0 5px;
+}
+
+.gl-label-text-light {
+  color: $white;
+}
+
+.gl-label-text-dark {
+  color: $gl-text-color;
+}
+
+.content {
+  .markdown-code-block pre.code {
+    padding: $gl-padding-8 $input-horizontal-padding;
+    margin: 0 0 $gl-padding-8;
+    border: 1px solid $gray-100;
+    border-radius: $border-radius-small;
+  }
+
+  @include email-code-block;
+}
